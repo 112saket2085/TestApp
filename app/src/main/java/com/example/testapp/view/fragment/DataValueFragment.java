@@ -43,7 +43,7 @@ public class DataValueFragment extends BaseFragment implements DataAdapter.OnIte
     private List<DataModel> dataModelList=new ArrayList<>();
     private DataFragment dataFragment;
     DataModel dataModelEven;
-    private DataModel dataModelOdd;
+    DataModel dataModelOdd;
     private Handler handler;
 
     DataValueFragment(DataFragment dataFragment) {
@@ -169,8 +169,6 @@ public class DataValueFragment extends BaseFragment implements DataAdapter.OnIte
 
     @Override
     public void onItemClick(DataModel dataModel) {
-        DataFragment dataFragment = (DataFragment) requireParentFragment();
-        showShortToast("done");
         int position=dataModelList.indexOf(dataModel)+1;
         if (position % 2 == 0) {
             this.dataModelEven=dataModel;

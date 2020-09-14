@@ -134,7 +134,7 @@ public class DataFragment extends BaseFragment {
             textViewNameViewTwo.setText(dataModel.getShortName());
             String changeValue = TextUtils.isEmpty(dataModel.getChange()) ? "" : "(" + dataModel.getChange() + ")";
             textViewValueViewTwo.setText(getString(R.string.str_data_value, dataModel.getLastTradePrice(), changeValue));
-        } else {
+        } else if (dataValueFragment.dataModelEven != null) {
             this.dataModel = dataModel;
             textViewNameViewOne.setText(dataModel.getShortName());
             String changeValue = TextUtils.isEmpty(dataModel.getChange()) ? "" : "(" + dataModel.getChange() + ")";
