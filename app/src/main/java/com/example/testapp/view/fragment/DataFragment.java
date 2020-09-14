@@ -134,7 +134,7 @@ public class DataFragment extends BaseFragment {
             textViewNameViewTwo.setText(dataModel.getShortName());
             String changeValue = TextUtils.isEmpty(dataModel.getChange()) ? "" : "(" + dataModel.getChange() + ")";
             textViewValueViewTwo.setText(getString(R.string.str_data_value, dataModel.getLastTradePrice(), changeValue));
-        } else if (dataValueFragment.dataModelEven != null) {
+        } else if (dataValueFragment.dataModelOdd != null) {
             this.dataModel = dataModel;
             textViewNameViewOne.setText(dataModel.getShortName());
             String changeValue = TextUtils.isEmpty(dataModel.getChange()) ? "" : "(" + dataModel.getChange() + ")";
@@ -164,7 +164,6 @@ public class DataFragment extends BaseFragment {
                                 handler.removeCallbacks(runnable);
                                 observeMarketFeedApi();
                             } else {
-                                showShortToast(marketDataDataEvent.getStatusDescription());
                                 handler.removeCallbacks(runnable);
                                 observeMarketFeedApi();
                             }

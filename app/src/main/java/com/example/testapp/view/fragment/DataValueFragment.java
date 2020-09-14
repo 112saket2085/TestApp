@@ -200,7 +200,6 @@ public class DataValueFragment extends BaseFragment implements DataAdapter.OnIte
                             handler.removeCallbacks(runnable);
                             observeMarketFeedApi();
                         } else {
-                            showShortToast(marketDataDataEvent.getStatusDescription());
                             handler.removeCallbacks(runnable);
                             observeMarketFeedApi();
                         }
