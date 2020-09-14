@@ -130,11 +130,11 @@ public class DataFragment extends BaseFragment {
     }
 
     void addMarketData(DataModel dataModel, boolean isEvenDataClick) {
-        if (isEvenDataClick && dataValueFragment.dataModelEven!=null) {
+        if (isEvenDataClick && dataValueFragment.dataModelEven!=null && dataValueFragment.dataModelEven.getScripCode().equalsIgnoreCase(dataModel.getScripCode())) {
             textViewNameViewTwo.setText(dataModel.getShortName());
             String changeValue = TextUtils.isEmpty(dataModel.getChange()) ? "" : "(" + dataModel.getChange() + ")";
             textViewValueViewTwo.setText(getString(R.string.str_data_value, dataModel.getLastTradePrice(), changeValue));
-        } else if (dataValueFragment.dataModelOdd != null) {
+        } else if (dataValueFragment.dataModelOdd != null && dataValueFragment.dataModelOdd.getScripCode().equalsIgnoreCase(dataModel.getScripCode())) {
             this.dataModel = dataModel;
             textViewNameViewOne.setText(dataModel.getShortName());
             String changeValue = TextUtils.isEmpty(dataModel.getChange()) ? "" : "(" + dataModel.getChange() + ")";

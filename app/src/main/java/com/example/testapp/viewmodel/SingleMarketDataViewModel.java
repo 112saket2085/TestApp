@@ -5,8 +5,7 @@ import android.app.Application;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
-
-import com.example.testapp.repository.MarketDataRepository;
+import com.example.testapp.repository.SingleMarketDataRepository;
 import com.example.testapp.rest.request.RequestBody;
 import com.example.testapp.viewmodel.model.BaseApiResponse;
 
@@ -20,7 +19,7 @@ public class SingleMarketDataViewModel extends AndroidViewModel {
     }
 
     public LiveData<BaseApiResponse.MarketDataDataEvent> getResponse(RequestBody.MarketRequestBody marketDataRequestBody) {
-        return MarketDataRepository.getInstance().getResponse(marketDataRequestBody);
+        return SingleMarketDataRepository.getInstance().getResponse(marketDataRequestBody);
     }
 
 }
