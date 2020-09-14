@@ -107,7 +107,7 @@ public class DataValueFragment extends BaseFragment implements DataAdapter.OnIte
             showErrorDataInfo(View.GONE, "");
             setRetryView(View.GONE, "");
             showProgressInfo(View.VISIBLE, getString(R.string.str_loading_data));
-            dataViewModel.getResponse().observe(getViewLifecycleOwner(), new Observer<BaseApiResponse.DataEvent>() {
+            dataViewModel.getResponse().observe(this, new Observer<BaseApiResponse.DataEvent>() {
                 @Override
                 public void onChanged(BaseApiResponse.DataEvent dataEvent) {
                     showProgressInfo(View.GONE, "");

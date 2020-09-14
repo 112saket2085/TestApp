@@ -156,7 +156,7 @@ public class DataFragment extends BaseFragment {
             if (isNetworkAvailable()) {
                 RequestBody.MarketRequestBody marketRequestBody = getRequestBody();
                 if(marketRequestBody!=null) {
-                    singleMarketDataViewModel.getResponse(marketRequestBody).observe(getViewLifecycleOwner(), new Observer<BaseApiResponse.MarketDataDataEvent>() {
+                    singleMarketDataViewModel.getResponse(marketRequestBody).observe(DataFragment.this, new Observer<BaseApiResponse.MarketDataDataEvent>() {
                         @Override
                         public void onChanged(BaseApiResponse.MarketDataDataEvent marketDataDataEvent) {
                             if (marketDataDataEvent.isSuccess() && marketDataDataEvent.getResponseView() != null) {
