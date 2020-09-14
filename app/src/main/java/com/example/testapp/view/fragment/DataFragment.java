@@ -137,7 +137,7 @@ public class DataFragment extends BaseFragment {
         } else if (dataValueFragment.dataModelOdd != null && dataValueFragment.dataModelOdd.getScripCode().equalsIgnoreCase(dataModel.getScripCode())) {
             this.dataModel = dataModel;
             textViewNameViewOne.setText(dataModel.getShortName());
-            String changeValue = TextUtils.isEmpty(dataModel.getChange()) ? "" : "(" + dataModel.getChange() + ")";
+            String changeValue = TextUtils.isEmpty(dataModel.getChange()) ? "" : "(" + dataModel.getChange() + " % )";
             textViewValueViewOne.setText(getString(R.string.str_data_value, dataModel.getLastTradePrice(), changeValue));
             observeMarketFeedApi();
         }
