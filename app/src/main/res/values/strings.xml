@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Test App</string>
+    <string name="text_font_regular" translatable="false">Roboto-Regular.ttf</string>
+
+
+    <!--Data Fragment-->
+    <string name="str_view_one">View 1</string>
+    <string name="str_view_two">View 2</string>
+    <string name="str_name">Name</string>
+    <string name="str_value">Value</string>
+    <string name="str_change">Change</string>
+    <string name="str_loading_data">Fetching Data</string>
+    <string name="str_retry">Retry</string>
+    <string name="str_server_error">Server Not Responding</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="no_internet_available_text">No Internet Available</string>
+    <string name="tab_one">Tab A</string>
+    <string name="str_data_fragment_title">Data</string>
+    <string name="tab_two">TAB B</string>
+    <string name="tab_three">TAB C</string>
+    <string name="str_data_value">%f %s</string>
+    <string name="str_change_value">%s %%</string>
+
+</resources>

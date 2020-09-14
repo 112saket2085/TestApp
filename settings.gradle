@@ -1,0 +1,2 @@
+rootProject.name='Shaadi Match'
+include ':app'
